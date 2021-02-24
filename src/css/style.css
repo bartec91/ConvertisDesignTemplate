@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+@-ms-viewport {
+  width: device-width;
+}
+@viewport {
+  width: device-width;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #6A6A6A;
+}
+a:hover {
+  color: #515151;
+}
+
+input,
+textarea,
+button {
+  -webkit-appearance: none;
+  border-radius: 0;
+  outline: none;
+}
+
+input[type="radio"] {
+  -webkit-appearance: radio;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: checkbox;
+}
+
+.outline {
+  position: absolute;
+  clip: rect(0px 0px 0px 0px);
+  *clip: rect 0 0 0 0;
+}
+
+mark {
+  background: none;
+  color: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font: 400 1.6rem/1 "Montserrat", sans-serif;
+  color: #6A6A6A;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.heading {
+  font-family: "Montserrat", sans-serif;
+}
+.heading--large {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+  margin-bottom: 2rem;
+}
+.content img {
+  max-width: 100%;
+}
+
+.header {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #BCBCBC;
+}
+.header__logo {
+  font-size: 6.5rem;
+  font-weight: 600;
+  color: #6A6A6A;
+}
+.header__search-input {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #BCBCBC;
+}
+.header__tool {
+  margin-right: 3.5rem;
+}
+.header__tool--last {
+  margin-right: 0;
+}
+
+@media (max-width: 991px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 6;
+  }
+}
+@media (min-width: 992px) {
+  .header__sticky.header__stuck {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation: header-show .45s;
+    z-index: 6;
+  }
+
+  .header__sticky.header__stuck .header__bottom {
+    display: none;
+  }
+}
+@keyframes header-show {
+  from {
+    transform: translateY(-0.625rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.nav-link {
+  font-weight: 600;
+  font-size: 2rem;
+  color: #6D6D6D;
+}
+
+.main-banner {
+  z-index: 1;
+}
+.main-banner__side-top {
+  background-color: #6EAAAE;
+}
+.main-banner__side-box {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #fff;
+}
+.main-banner__side-box:hover {
+  color: #e6e6e6;
+}
+.main-banner__side-box h2 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+.main-banner__side-box button {
+  color: #6EAAAE;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.main-banner__side-bottom {
+  background: url("../img/banner-side-bottom.png") no-repeat;
+  background-size: cover;
+}
+
+.main-content {
+  z-index: 5;
+  height: 858px;
+  margin-bottom: 25rem;
+}
+.main-content .nav {
+  margin-bottom: 8rem;
+  background-color: #6D6D6D;
+}
+.main-content .nav-link {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+}
+.main-content .tab-content {
+  background-color: #DFDFDF;
+}
+
+@media (max-width: 991px) {
+  .main-banner__side-bottom, .main-banner__side-small {
+    height: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .main-banner {
+    margin-bottom: -6rem;
+  }
+}
+.header__search-trigger, .header__tool-shape {
+  background-color: #BCBCBC;
+}

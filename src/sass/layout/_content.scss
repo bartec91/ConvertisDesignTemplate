@@ -1,0 +1,80 @@
+// -------------------------------
+//     CONTENT VARIABLES
+// -------------------------------
+
+    // *--------- TYPOGRAPHY ---------*
+
+    // *--------- COLORS ---------*
+// ----------------------------
+//     CONTENT STYLES
+// ----------------------------
+.main-banner {
+    z-index: 1;
+
+    &__side-top {
+        background-color: $third__color;
+    }
+
+    &__side-box {
+        font-size: $font-size;
+        font-weight: $font-weight;
+        color: #fff;
+
+        &:hover {
+            color: darken(#fff, 10);
+        }
+
+        h2 {
+            font-size: $heading__font-size--large;
+            font-weight: $font-weight--semi-bold;
+        }
+
+        button {
+            color: $third__color;
+            font-size: $font-size;
+            font-weight: $font-weight;
+        }
+    }
+
+    &__side-bottom {
+        background: url('../img/banner-side-bottom.png') no-repeat;
+        background-size: cover;
+    }
+}
+
+.main-content {
+    z-index: 5;
+    height: 858px;
+    margin-bottom: 25rem;
+
+    .nav {
+        margin-bottom: 8rem;
+
+        background-color: $second__color;
+
+        &-link {
+            font-size: $font-size--large;
+            font-weight: $font-weight--semi-bold;
+            color: #fff;
+        }
+    }
+
+    .tab-content {
+        background-color: $fourth__color;
+    }
+}
+
+// Content BreakPoints & Animations
+@media (max-width: 991px) {
+    .main-banner {
+        &__side-bottom, &__side-small {
+            height: 100%;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .main-banner {
+        margin-bottom: -6rem;
+    }
+}

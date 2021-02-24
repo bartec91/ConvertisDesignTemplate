@@ -1,0 +1,59 @@
+// -------------------------------
+//     TYPOGRAPHY VARIABLES
+// -------------------------------
+
+    // *--------- TYPOGRAPHY ---------*
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+    $base__font-family: 'Montserrat', sans-serif; // 400, 600
+
+    $font-size: 1.6rem;
+    $font-size--large: 2rem;
+    $font-size--x-large: 6.5rem;
+    $font-weight: 400;
+    $font-weight--semi-bold: 600;
+
+
+    $heading__font-size--large: 3rem;
+
+// -------------------------------
+//     TYPOGRAPHY STYLES
+// -------------------------------
+
+    // *--------- GENERAL ---------*
+    html {
+        font-size: 62.5%;
+    }
+
+    body {
+        font: $font-weight #{$font-size}/1 $base__font-family;
+        color: $base__color;
+    }
+
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    // *--------- HEADINGS ---------*
+    .heading {
+        font-family: $base__font-family;
+
+        &--large {
+            font-size: $heading__font-size--large;
+            font-weight: $font-weight--semi-bold;
+        }
+    }
+
+    // *--------- TEXT ---------*
+    .content {
+        h1, h2, h3, h4, h5, h6 {
+            margin-bottom: 2rem;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }

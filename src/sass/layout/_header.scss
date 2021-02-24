@@ -1,0 +1,84 @@
+// -------------------------------
+//     HEADER VARIABLES
+// -------------------------------
+
+    // *--------- TYPOGRAPHY ---------*
+
+    // *--------- COLORS ---------*
+
+// ----------------------------
+//     HEADER STYLES
+// ----------------------------
+
+.header {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $base__color--lighter;
+
+    &__logo {
+        font-size: $font-size--x-large;
+        font-weight: $font-weight--semi-bold;
+        color: $base__color;
+    }
+
+    &__search {
+        &-trigger {
+            @extend %bgShape;
+        }
+
+        &-input {
+            font-size: $font-size;
+            font-weight: $font-weight;
+            color: $base__color--lighter;
+        }
+    }
+
+    &__tool {
+        margin-right: 3.5rem;
+
+        &--last {
+            margin-right: 0;
+        }
+
+        &-shape {
+            @extend %bgShape;
+        }
+    }
+}
+
+// Header BreakPoints & Animations
+@media (max-width: 991px) {
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 6;
+    }
+}
+
+@media (min-width: 992px) {
+    .header__sticky.header__stuck {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        animation: header-show .45s;
+        z-index: 6;
+    }
+
+    .header__sticky.header__stuck .header__bottom {
+        display: none;
+    }
+}
+
+@keyframes header-show {
+  from {
+    transform: translateY(-.625rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
